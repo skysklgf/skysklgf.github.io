@@ -1,77 +1,281 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
     <title>State-Based Plot Coloring</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="/Images/GE.png">
     <style>
+        body 
+        {
+            font-family: "Lato", sans-serif;
+        }
 
+        .mySlides 
+        {
+            display: none;
+        }
     </style>
 </head>
-<body style="background-color:lightgrey">
-    <Grid style="align-content:center">
-        <div style="background-color:dimgray">
-            <h1>
-                <img src="CP2.PNG" height="202" width="316" align="middle" />
-                <span style="font-size:50px; font-style:italic; color:whitesmoke">State-Based Plot Coloring</span>
-            </h1>
-        </div>
-        <hr />
-        <p>
-            <table style="width:75%" align="center">
-                <tr>
-                    <td>
-                        <font size="5" face="Arial Black">
-                            <div style="float: left">&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">Home</a></div>
-                            <div style="float: right"><a href="Resource.html">Resources</a></div>
-                            <div style="margin: 0 auto; width: 150px;"><a href="Team.html">Team</a></div>
-                        </font>
-                    </td>
-                </tr>
-            </table>
-        </p>
-        <hr />
-        <p>
-            <div style="text-align:center">
-                <h2>State-Based Plot Coloring</h2>
-                <font size="4">CS 426 Senior Project</font><br />
-                <font size="4">Team #36</font><br />
-                <font size="4">Instructor: Sergiu Dascalu</font><br />
-                <font size="4">External Advisor: Mr.Eric Gilchrist</font><br />
-                <font size="4">University of Nevada, Reno</font><br />
-                <font size="4">CSE Department</font><br />
-                <font size="4">Spring 2018</font><br />
-            </div>
-        </p>
-        <br>
-        <p>
-            <div style="text-align:center">
-                <h2>What is a State-Based Plot Coloring? </h2>
-                 <table style="align-content:center" width="500" align="center">
-                     <tr style="text-align:justify">
-                         <td>
-                             For many years, people have suffered from physical and economic damage due to the failure of their
-                             machines. To identify the conditions of machines, they needed to open the machines and check what
-                             is wrong. It is sometimes very difficult for some machines to be open and be checked. It is
-                             not a convenient and efficient way if the structure of the machine is very complex, and the size of the
-                             machine is huge. For the problem, General Electric (GE) company plans to design a new software called "State-Based Plot coloring" to
-                             visualize surge data from machines on the graph by plotting those data with different colors to
-                             support the users.
-                             <br />
-                             <br />
-                             A State-Based Plot Coloring is a condition monitoring system which help users to easily understand a conditions of a machine by visualizing data from the machine. 
-                             To visualize the conditions of the machine, plotting methods are used to let users identify what state their machine is in and why the machine failure happened. 
-                             The software will virtually display data with different colors in a Trend Plot, a Cascade Plot, and a Bode Plot. 
-                             When there is overlapping between those states, there will be a specific color on the overlap to notify users that there is a problem.
-                             <br />
-                             <br />
-                             State-Based Plot Coloring is implemented in C# language for ease of development and the Window Presentation Foundation (WPF) is used for ease of development for several UIs. 
-                             The system uses a database in order to store necessary information, such as Date, RPM, HZ, and Machine Name. 
-                         </td>
-                     </tr>                     
-                 </table>
-            </div>
-        </p>
 
-</Grid>
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-light-grey w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large"><font size="2"><b>HOME</b></font></a>
+            <a href="documents.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><font size="2"><b>DOCUMENTS</b></font></a>
+            <a href="technology.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><font size="2"><b>TECHNOLOGY</b></font></a>
+            <a href="resources.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><font size="2"><b>RESOURCES</b></font></a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="document.html" class="w3-bar-item w3-button w3-padding-large">DOCUMENTS</a>
+        <a href="technology.html" class="w3-bar-item w3-button w3-padding-large">TECHNOLOGY</a>
+        <a href="resources.html" class="w3-bar-item w3-button w3-padding-large">RESOURCES</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+        <!-- Automatic Slideshow Images -->
+        <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+            <div class="mySlides w3-display-container w3-center">
+
+                    <img src="/Images/Background.jpg" style="width:100%;min-height:250px;max-height:350px;">
+                    <div class="w3-display-middle w3-container w3-text-deep-purple w3-padding-32 w3-hide-small">
+                        <h1 class="w3-text-red">State-Based Plot Coloring</h1>
+                        <div style="text-align: center;">
+                            <font size="4">cs 426 senior project</font>
+                        </div>
+                        <div style="text-align: center;">
+                            <font size="4">Team #36</font>
+                        </div>
+                        <div style="text-align: center;">
+                            <font size="4">University of Nevada, Reno</font>
+                        </div>
+                        <div style="text-align: center;">
+                            <font size="4">CSE Department</font>
+                        </div>
+                        <div style="text-align: center;">
+                            <font size="4">Spring 2018</font>
+                        </div>
+                    </div>
+             </div>
+        </div>
+
+        <!-- The Project Description Section -->
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" >
+
+            <p class="w3-justify">
+                For many years, people have suffered from physical and economic damage due to the failure of their machines. To identify the conditions of machines,
+                they needed to open the machines and check what are the problems with their machines.
+                It is not a convenient and efficient way if the structure of the machine is very complex, and the size of the machine is huge.
+                To solve the problems, General Electric (GE) company designs a software called "State-Based Plot Coloring" to visualize surge data from machines
+                in different plots to support users to detect problems within their machines.
+            </p>
+            <p class="w3-justify">
+                State-Based Plot Coloring is a software application which helps users to easily understand the conditions of their machines by visualizing data from their machines. 
+                To display data from different machines, plotting methods are used to help users identify what states their machines are in and if there is any problem with their machines. 
+                The software displays data with different colors in a Trend Plot, a Cascade Plot, and a Bode Plot. When there are overlaps between states and different machines, 
+                the software displays the overlapping states and machines in a user-friendly way, which helps the users check the relationship between different machines and 
+                detect problems within their machines.
+            </p>
+        
+
+          </div>
+            
+        </div>
+
+    <!-- Team Members Section -->
+    <div class="w3-content w3-light-grey" style="max-width:100%;margin-top:46px">
+        <div class="w3-row w3-container w3-content w3-center w3-row-padding" style="max-width:800px;">
+            <div class=" w3-center w3-padding-64">
+                <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Team Members</span>
+            </div>
+
+            <div class="w3-third w3-white w3-margin-bottom">
+                <div class="w3-card-4" style="max-height:640px">
+                    <img src="/Images/Haoxuan.png" alt="Lin" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Haoxuan Lin</h3>
+                        <p class="w3-opacity">Team Leader</p>
+                        <p>
+                            As a dedicated and hard-working Computer Science student who migrated to the United States,
+                            Haoxuan proved himself by gaining senior standing within the Computer Science department.
+                            Haoxuan’s interest lies within algorithms and theory. He develops the user interface,
+                            and implements the Cascade Plot for this project.
+                        </p>
+                        <p style="white-space: pre-wrap">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third w3-white w3-margin-bottom">
+                <div class="w3-card-4" style="max-height:640px">
+                    <img src="/Images/Zach.png" alt="Zach" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Zachary Young</h3>
+                        <p class="w3-opacity">Programming Specialist</p>
+                        <p>
+
+                            Zachary grows up in Nevada, and he has a broad range of experience in the field of game development.
+                            He thrives on challenge, and it was one of the reasons why he chose to major in Computer Science and Engineering.
+                            He implements the Trend Plot for this project.
+                        </p>
+                        <p style="white-space: pre-wrap">
+
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w3-third w3-white w3-margin-bottom">
+                <div class="w3-card-4" style="max-height:640px">
+                    <img src="/Images/Wan.png" alt="Wan" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Myeongwan Beom</h3>
+                        <p class="w3-opacity">Programming Specialist</p>
+                        <p>
+                            Myeongwan is an international student, and he has always had a strong mechanical aptitude and a strong ability to think critically.
+                            He is proficient in operating systems and programming languages. He implements the Bode Plot for this project.
+                        </p>
+                        <p style="white-space: pre-wrap">
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INSTRUCTORS & EXTERNAL ADVISOR Section -->
+    <div class="w3-content w3-white" style="max-width:100%;margin-top:46px">
+        <div class="w3-row w3-container w3-content w3-center w3-row-padding" style="max-width:800px;">
+            <div class="w3-center w3-padding-64">
+                <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Instructors & External Advisor</span>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <div class="w3-card-4" style="max-height:600px">
+                    <img src="/Images/Sergiu_Dascalu.png" alt="Dr. Dascalu" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Sergiu Dascalu</h3>
+                        <p class="w3-opacity">INSTRUCTOR</p>
+                        <p>
+                            Dr. Dascalu is a Professor in the Department of Computer Science and Engineering at the University of Nevada,
+                            Reno (UNR). He is also the Director of the Software Engineering Laboratory (SOELA) and the Co-Director of
+                            the Cyberinfrastructure Lab (CIL) at UNR.
+                        </p>
+                        <p style="white-space: pre-wrap">
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <div class="w3-card-4" style="max-height:600px">
+                    <img src="/Images/Devrin_Lee.png" alt="Devrin Lee" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Devrin Lee</h3>
+                        <p class="w3-opacity">INSTRUCTOR</p>
+                        <p>
+
+                            Devrin Lee is an instructor for CS 426 Senior Project in the department of Computer
+                            Science at the University of Nevada, Reno. She is a senior program manager at PCLender LLC.
+                        </p>
+                        <p style="white-space: pre-wrap">
+
+
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <div class="w3-card-4" style="max-height:600px">
+                    <img src="/Images/Eric_Gilchrist.png" alt="Eric Gilchrist" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Eric Gilchrist</h3>
+                        <p class="w3-opacity">EXTERNAL ADVISOR</p>
+                        <p>
+                            Eric Gilchrist graduated in 2015 with a bachelor’s degree in Computer Science.
+                            He currently works for General Electric as a Software Engineer, and he works on their main
+                            software product there called “System1”, which is a machine condition monitoring system.
+                        </p>
+                        <p style="white-space: pre-wrap">
+
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </footer>
+
+        <script>
+            // Automatic Slideshow - change image every 4 seconds
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 4000);
+            }
+
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            var modal = document.getElementById('ticketModal');
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
 </body>
 </html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>State-Based Plot Coloring</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="/Images/GE.png">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-light-grey w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large"><font size="2"><b>HOME</b></font></a>
+            <a href="documents.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><font size="2"><b>DOCUMENTS</b></font></a>
+            <a href="technology.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><font size="2"><b>TECHNOLOGY</b></font></a>
+            <a href="resources.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><font size="2"><b>RESOURCES</b></font></a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="document.html" class="w3-bar-item w3-button w3-padding-large">DOCUMENTS</a>
+        <a href="technology.html" class="w3-bar-item w3-button w3-padding-large">TECHNOLOGY</a>
+        <a href="resources.html" class="w3-bar-item w3-button w3-padding-large">RESOURCES</a>
+    </div>
+
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+        <!-- Automatic Slideshow Images -->
+        <div class="w3-content" style="max-width:2000px;margin-top:46px">
+            <img src="/Images/Sky.jpg" style="width:100%;min-height:200px;max-height:250px;">
+        </div>
+
+    </div>
+
+    <div class="w3-content" style="max-width:2000px;margin-top:0px">
+        <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:800px">
+            <h2 class="w3-text-red">Documents</h2>
+
+            <h3 class="w3-text-deep-purple">Articles and Papers</h3>
+            <ol class="w3-justify">
+                <li>Alexander Ypma. Learning methods for machine vibration analysis. 12 November 2001 <a href="http://rduin.nl/papers/thesis_01_ypma.pdf" target="_blank" class="w3-text-blue" style="text-decoration: none;">(PDF)</a>.</li>
+                <li>Chockalingam Aravine Vaithilingam, Gilbert Thio, Rajparthiban Rajkumar. Health monitoring of induction motor for vibration analysis <a href="http://www.jee.ro/covers/art.php?issue=WU1264295972W4b5ba024a5c9d" target="_blank" class="w3-text-blue" style="text-decoration: none;">(PDF)</a>.</li>
+                <li>Chen Lu, Yang Wang, Minvydas Raguiskis, Yujie Cheng. Fault Diagnosis for Rotating Machinery: A Method based on Image Processing. 6 October 2016 <a href="http://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0164111&type=printable" target="_blank" class="w3-text-blue" style="text-decoration: none;">(PDF)</a>.</li>
+            </ol>
+  
+
+            <h3 class="w3-text-deep-purple">Book</h3>
+            <ol class="w3-justify">
+                <li>Adam Nathan. WPF Unleashed 4. 14 June 2010 <a href="https://mehmetakifsonmez.files.wordpress.com/2013/12/wpf-4-unleashed.pdf" target="_blank" class="w3-text-blue" style="text-decoration: none;">(PDF)</a>.</li>
+            </ol>
+
+            <h3 class="w3-text-deep-purple">Websites</h3>
+            <ol class="w3-justify">
+                <li>WPF Tutorial.net <a href="http://www.wpftutorial.net/Home.html" target="_blank" class="w3-text-blue" style="text-decoration: none;">(Hyperlink)</a>.</li>
+                <li>High performance WPF 3D Chart <a href="https://www.codeproject.com/Articles/42174/High-performance-WPF-D-Chart" target="_blank" class="w3-text-blue" style="text-decoration: none;">(Hyperlink)</a>.</li>
+            </ol>
+           
+        </div>
+
+    </div>
+
+   
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </footer>
+
+    <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
